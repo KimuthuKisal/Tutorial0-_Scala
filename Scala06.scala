@@ -2,7 +2,7 @@ import scala.io.StdIn._
 
 object CeaserCipher {
 
-    def cipher( text:String, my_function:(Char,Int) => Char, shift:Int ) : String = text.map (my_function ( _, shift ))   //pass the algorithm to the map function
+    def cipher( text:String, my_function:(Char,Int) => Char, shift:Int ) : String = text.map (my_function ( _, shift ))   //pass the my_function to the map
 
     def encryption ( character:Char, shift:Int ) : Char = character match
         case x if !x.isLetter => x
